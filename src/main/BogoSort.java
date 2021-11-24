@@ -1,3 +1,5 @@
+package main;
+
 public class BogoSort {
     // Sorts array a[0..n-1] using Bogo sort
     void bogoSort(int[] a)
@@ -7,7 +9,7 @@ public class BogoSort {
         while (isSorted(a) == false)
             shuffle(a);
     }
- 
+
     // To generate permutation of the array
     void shuffle(int[] a)
     {
@@ -17,7 +19,7 @@ public class BogoSort {
         for (int i = 0; i < a.length; i++)
             swap(a, i, (int)(Math.random() * i));
     }
- 
+
     // Swapping 2 elements
     void swap(int[] a, int i, int j)
     {
@@ -25,7 +27,7 @@ public class BogoSort {
         a[i] = a[j];
         a[j] = temp;
     }
- 
+
     // To check if array is sorted or not
     boolean isSorted(int[] a)
     {
@@ -34,7 +36,7 @@ public class BogoSort {
                 return false;
         return true;
     }
- 
+
     // Prints the array
     void printArray(int[] arr)
     {
@@ -42,15 +44,15 @@ public class BogoSort {
             System.out.print(arr[i] + " ");
         System.out.println();
     }
- 
+
     public static void main(String[] args)
     {
         // Enter array to be sorted here
         int[] a = { 3, 2, 5, 1, 0, 4 };
         BogoSort ob = new BogoSort();
- 
+
         ob.bogoSort(a);
- 
+
         System.out.print("Sorted array: ");
         ob.printArray(a);
     }
