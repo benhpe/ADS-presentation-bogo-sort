@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Main {
 
     //count shuffle amount
-    public static int counter = 0;
+    public static long counter = 0;
 
     public static void bogoSort(int[] numbers) {
         boolean isSorted = false;
@@ -31,6 +31,7 @@ public class Main {
 
     public static void main(String[] args) {
         int[] nums = {1, 4, 2, 1, 5, 7, 8, 6, 12, 20, 71, 72};
+
         long startTime = System.nanoTime();
         bogoSort(nums);
         long endTime = System.nanoTime();
